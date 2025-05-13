@@ -14,6 +14,8 @@
 #include "TaskAbilitySystemComponent.h"
 #include "Test_TaskPlayerState.h"
 #include "Test_TaskHUD.h"
+#include "AbilitySystemComponent.h"
+#include "TaskAttributeSet.h"
 #include "Engine/LocalPlayer.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -42,6 +44,16 @@ ATest_TaskCharacter::ATest_TaskCharacter()
 
 	fPlayerHealth = 100.0f;
 	
+}
+
+void ATest_TaskCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+   
+	if (TextWidget)
+	{
+		TextWidget->UpdateHealthBar(fPlayerHealth);
+	}
 }
 
 UAbilitySystemComponent* ATest_TaskCharacter::GetAbilitySystemComponent() const

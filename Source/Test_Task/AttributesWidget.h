@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "AttributesWidget.generated.h"
 
+class UProgressBar;
 /**
  * 
  */

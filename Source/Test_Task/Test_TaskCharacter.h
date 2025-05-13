@@ -85,6 +85,8 @@ protected:
 	void InitAbilitySystemComponent();
 	void InitDefaultAttributes() const;
 
+	virtual void Tick(float DeltaSeconds) override;
+
 	UPROPERTY(EditAnywhere, Category = "HUD Class")
 	TSubclassOf<UUserWidget> WidgetClass;
 
