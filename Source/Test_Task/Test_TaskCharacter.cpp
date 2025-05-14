@@ -278,4 +278,5 @@ void ATest_TaskCharacter::StopShowingHUDAndDamaging()
 	}
 	
 	GetWorld()->GetTimerManager().ClearTimer(HealthReductionTimer);
+	//Stop the ability and Hide the HUD
 }
