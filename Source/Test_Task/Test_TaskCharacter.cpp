@@ -73,7 +73,7 @@ void ATest_TaskCharacter::PossessedBy(AController* NewController)
 	InitAbilitySystemComponent();
 	GiveDefaultAbilities();
 	InitDefaultAttributes();
-	InitHUD();
+	//InitHUD();
 }
 
 void ATest_TaskCharacter::OnRep_PlayerState()
@@ -84,7 +84,7 @@ void ATest_TaskCharacter::OnRep_PlayerState()
 
 	InitDefaultAttributes();
 
-	InitHUD();
+	//InitHUD();
 }
 
 //////////////////////////////////////////////////////////////////////////// Input
@@ -277,5 +277,5 @@ void ATest_TaskCharacter::StopShowingHUDAndDamaging()
 		}
 	}
 	
-	//GetWorld()->GetTimerManager().ClearTimer(HealthReductionTimer);
+	GetWorld()->GetTimerManager().ClearTimer(HealthReductionTimer);
 }
